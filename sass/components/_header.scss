@@ -1,48 +1,69 @@
 .header {
-  min-height: 80px;
-  border-bottom: 1px solid #ececec;
+  position: relative;
   &__container {
+    height: 60px;
     @include flexContainer(flex, space-between, center);
   }
 
-  &__logo {
-    margin-right: 93px;
-  }
-
   &__link {
-    color: $descr-color;
-    padding: 32px 0;
-    display: flex;
-    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
   }
 
   &__icon {
-    fill: $descr-color;
-    margin-right: 10px;
-    transition: fill $timing-transition;
+    display: none;
   }
 }
 
-.menu {
-  @include flexContainer(flex, flex-start, center);
+.phone {
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
 
+.menu {
   &__list {
-    @include flexContainer(flex, flex-start, center);
+    transform: translateY(-100%);
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #ffffff;
+    transition: transform 0.6s $timing-transition;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-right: 60px;
+  }
+
+  &.is-open &__list {
+    transform: translateY(0);
   }
 
   &__item + &__item {
-    margin-left: 50px;
+    margin-top: 32px;
   }
 
   &__link {
     position: relative;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 47px;
     letter-spacing: 0.02em;
     color: $main-color;
     transition: color $timing-transition;
-    padding: 32px 0;
+    padding: 10px 0;
 
     &:hover,
     &:focus {
@@ -52,59 +73,89 @@
 
   &__link--current {
     color: $brand-color;
+  }
 
-    &::after {
+  &__soc-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+
+  &__soc-item {
+    position: relative;
+  }
+
+  &__soc-item + &__soc-item {
+    &::before {
       content: "";
-      width: 100%;
-      height: 4px;
       position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      background-color: $brand-color;
-      border-radius: 2px;
+      width: 1px;
+      height: 22px;
+      background-color: rgba(33, 33, 33, 0.2);
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
     }
   }
+
+  &__soc-link {
+    color: $brand-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    padding: 5px;
+  }
 }
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: #000000;
   font-style: normal;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.29;
   letter-spacing: 0.03em;
 
   > span {
     color: $brand-color;
   }
+
+  @media screen and (min-width: 769px) {
+    font-size: 26px;
+  }
 }
 
-.link {
-  text-decoration: none;
+.menu-btn {
+  position: relative;
+  z-index: 1000;
+  background-color: transparent;
+  .icon-close {
+    display: none;
+  }
+
+  &.is-open .icon-close {
+    display: block;
+  }
+
+  &.is-open .icon-open {
+    display: none;
+  }
 }
 
 .connection {
   &__nav-header {
-    @include flexContainer(flex, flex-start, center);
+    display: flex;
+    flex-direction: column;
   }
 
-  &__item + &__item {
-    margin-left: 50px;
+  &__item:nth-child(2) {
+    order: -1;
+    margin-bottom: 32px;
   }
-}
-.main__link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color $timing-transition;
 
-  &:hover,
-  &:focus,
-  &:hover .header__icon,
-  &:focus .header__icon {
-    color: $brand-color;
-    fill: $brand-color;
+  &__item:nth-child(1) {
+    margin-bottom: 64px;
   }
 }
