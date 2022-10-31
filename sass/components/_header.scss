@@ -1,0 +1,110 @@
+.header {
+  min-height: 80px;
+  border-bottom: 1px solid #ececec;
+  &__container {
+    @include flexContainer(flex, space-between, center);
+  }
+
+  &__logo {
+    margin-right: 93px;
+  }
+
+  &__link {
+    color: $descr-color;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: $descr-color;
+    margin-right: 10px;
+    transition: fill $timing-transition;
+  }
+}
+
+.menu {
+  @include flexContainer(flex, flex-start, center);
+
+  &__list {
+    @include flexContainer(flex, flex-start, center);
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $main-color;
+    transition: color $timing-transition;
+    padding: 32px 0;
+
+    &:hover,
+    &:focus {
+      color: $brand-color;
+    }
+  }
+
+  &__link--current {
+    color: $brand-color;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      background-color: $brand-color;
+      border-radius: 2px;
+    }
+  }
+}
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1.29;
+  letter-spacing: 0.03em;
+
+  > span {
+    color: $brand-color;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.connection {
+  &__nav-header {
+    @include flexContainer(flex, flex-start, center);
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+  }
+}
+.main__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color $timing-transition;
+
+  &:hover,
+  &:focus,
+  &:hover .header__icon,
+  &:focus .header__icon {
+    color: $brand-color;
+    fill: $brand-color;
+  }
+}

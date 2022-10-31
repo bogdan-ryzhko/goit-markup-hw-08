@@ -1,0 +1,228 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./base/base";
+@import "./utils/mixins";
+@import "./components/header";
+
+// =================================================> Герой <=================================================
+
+.hero {
+  text-align: center;
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: $secondary-bg;
+  background-image: url("../../images/hero-bg.jpg"),
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  @include background(no-repeat, cover, center);
+  padding: 200px 0;
+
+  &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    padding: 10px 32px;
+    border: inherit;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: $brand-color;
+    font-weight: 700;
+    transition: background-color $timing-transition;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-btn;
+    }
+  }
+}
+
+// =================================================> Переваги <=================================================
+
+.benefits {
+  padding-top: 94px;
+
+  &__title {
+    font-size: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &__list {
+    @include flexContainer(flex, center);
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    max-width: 270px;
+  }
+
+  &__icon-wrapper {
+    background-color: #f5f4fa;
+    @include flexContainer(flex, center, center);
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $descr-color;
+  }
+}
+
+// =================================================> Чим ми займаємось <=================================================
+
+.about {
+  &__list {
+    @include flexContainer(flex, center, center);
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    min-height: 70px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    @include flexContainer(flex, center, center);
+    color: #ffffff;
+  }
+}
+
+// =================================================> Наша команда <=================================================
+
+.team {
+  background-color: $team-bg;
+
+  &__list {
+    @include flexContainer(flex, center, center);
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    padding: 30px 0;
+  }
+
+  &__item {
+    max-width: 270px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+  }
+
+  &__item-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  &__item-descr {
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $descr-color;
+    margin-bottom: 16px;
+  }
+
+  &__soc-list {
+    @include flexContainer(flex, center, center);
+  }
+
+  &__soc-item + &__soc-item {
+    margin-left: 10px;
+  }
+
+  &__soc-link {
+    @include flexContainer(flex, center, center);
+    padding: 12px;
+    border-radius: 100%;
+    color: $icon-color;
+    transition: background-color $timing-transition, color $timing-transition;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-color;
+      color: #ffffff;
+    }
+  }
+  &__soc-icon {
+    fill: currentColor;
+  }
+}
+
+// =================================================> Постійні клієнти <=================================================
+
+.clients {
+  &__list {
+    @include flexContainer(flex, space-between, center);
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    @include flexContainer(flex, center, center);
+    width: 170px;
+    height: 92px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    transition: color $timing-transition;
+    color: $icon-color;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $brand-color;
+      color: $brand-color;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+@import "./components/footer";
+@import "./components/modal";

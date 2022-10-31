@@ -1,0 +1,11 @@
+@mixin flexContainer($display, $justify: flex-start, $align: stretch) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin background($repeat, $size, $position) {
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
