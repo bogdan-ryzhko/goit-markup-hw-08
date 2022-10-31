@@ -58,9 +58,6 @@
     margin: 0 auto;
   }
 
-  &__soc-item {
-  }
-
   &__soc-link {
     @include flexContainer(flex, center, center);
     padding: 12px;
@@ -170,8 +167,6 @@
 }
 
 .connection {
-  &__nav-footer {
-  }
   &__item-footer + &__item-footer {
     margin-top: 8px;
   }

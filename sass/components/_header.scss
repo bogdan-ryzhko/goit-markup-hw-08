@@ -57,7 +57,7 @@
     display: none;
   }
   &__list {
-    transform: translateY(-100%);
+    transform: translateY(-110%);
     position: absolute;
     z-index: 500;
     top: 0;
@@ -218,7 +218,7 @@
   }
 }
 
-.menu-desctop {
+.menu-desktop {
   display: none;
 
   @media screen and (min-width: 768px) {
@@ -254,7 +254,7 @@
         color: $brand-color;
       }
 
-      &.menu-desctop__link--current {
+      &.menu-desktop__link--current {
         color: $brand-color;
         position: relative;
 
@@ -273,7 +273,7 @@
   }
 }
 
-.desctop-connection {
+.desktop-connection {
   &__item {
     > .header__link {
       transition: color $timing-transition;
@@ -295,5 +295,14 @@
 
   &__item + &__item {
     margin-top: 10px;
+  }
+
+  @media screen and (min-width: 870px) {
+    display: flex;
+
+    &__item + &__item {
+      margin-top: 0px;
+      margin-left: 30px;
+    }
   }
 }

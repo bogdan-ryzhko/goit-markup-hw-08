@@ -104,7 +104,15 @@
 
     &__item {
       flex-basis: calc(100% / 2 - 30px);
-      text-align: left;
+      text-align-last: left;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .benefits {
+      &__item {
+        flex-basis: calc(100% / 4 - 30px);
+      }
     }
   }
 }

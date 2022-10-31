@@ -452,7 +452,7 @@ li {
   }
 }
 .menu__list {
-  transform: translateY(-100%);
+  transform: translateY(-110%);
   position: absolute;
   z-index: 500;
   top: 0;
@@ -586,48 +586,48 @@ li {
   margin-bottom: 64px;
 }
 
-.menu-desctop {
+.menu-desktop {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .menu-desctop {
+  .menu-desktop {
     display: block;
     width: 100%;
   }
-  .menu-desctop__wrapper {
+  .menu-desktop__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .menu-desctop__navigation-wrapper {
+  .menu-desktop__navigation-wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
   }
-  .menu-desctop__navigation-wrapper > .header__logo {
+  .menu-desktop__navigation-wrapper > .header__logo {
     margin-right: 88px;
   }
-  .menu-desctop__navigation {
+  .menu-desktop__navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .menu-desctop__item + .menu-desctop__item {
+  .menu-desktop__item + .menu-desktop__item {
     margin-left: 50px;
   }
-  .menu-desctop__link {
+  .menu-desktop__link {
     padding: 31px 0;
     color: #212121;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .menu-desctop__link:hover, .menu-desctop__link:focus {
+  .menu-desktop__link:hover, .menu-desktop__link:focus {
     color: #2196f3;
   }
-  .menu-desctop__link.menu-desctop__link--current {
+  .menu-desktop__link.menu-desktop__link--current {
     color: #2196f3;
     position: relative;
   }
-  .menu-desctop__link.menu-desctop__link--current::after {
+  .menu-desktop__link.menu-desktop__link--current::after {
     content: "";
     position: absolute;
     left: 0;
@@ -639,20 +639,29 @@ li {
   }
 }
 
-.desctop-connection__item > .header__link {
+.desktop-connection__item > .header__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.desctop-connection__item > .header__link:hover, .desctop-connection__item > .header__link:focus {
+.desktop-connection__item > .header__link:hover, .desktop-connection__item > .header__link:focus {
   color: #2196f3;
 }
-.desctop-connection__item > .header__link > .header__icon {
+.desktop-connection__item > .header__link > .header__icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.desctop-connection__item > .header__link:hover .header__icon, .desctop-connection__item > .header__link:focus .header__icon {
+.desktop-connection__item > .header__link:hover .header__icon, .desktop-connection__item > .header__link:focus .header__icon {
   fill: #2196f3;
 }
-.desctop-connection__item + .desctop-connection__item {
+.desktop-connection__item + .desktop-connection__item {
   margin-top: 10px;
+}
+@media screen and (min-width: 870px) {
+  .desktop-connection {
+    display: flex;
+  }
+  .desktop-connection__item + .desktop-connection__item {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
