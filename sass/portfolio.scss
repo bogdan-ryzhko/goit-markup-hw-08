@@ -7,12 +7,12 @@
 
 .portfolio {
   &__list {
-    @include flexContainer(flex, center, center);
-    margin-bottom: 50px;
-  }
-
-  &__navigation-item + &__navigation-item {
-    margin-left: 8px;
+    display: flex;
+    gap: 8px;
+    row-gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0px auto 40px;
   }
 }
 

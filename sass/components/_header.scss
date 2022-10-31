@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  border-bottom: 1px solid #ececec;
   &__container {
     height: 60px;
     @include flexContainer(flex, space-between, center);
@@ -178,10 +179,20 @@
   }
 }
 
+.icon-open,
+.icon-close {
+  transition: fill $timing-transition;
+}
+
 .menu-btn {
   position: relative;
   z-index: 1000;
   background-color: transparent;
+
+  &:hover .icon-open,
+  &:hover .icon-close {
+    fill: $brand-color;
+  }
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -245,7 +256,7 @@
     }
 
     &__link {
-      padding: 31px 0;
+      padding: 32px 0;
       color: $main-color;
       transition: color $timing-transition;
 
@@ -289,6 +300,10 @@
       &:hover .header__icon,
       &:focus .header__icon {
         fill: $brand-color;
+      }
+
+      @media screen and (min-width: 870px) {
+        padding: 32px 0;
       }
     }
   }
