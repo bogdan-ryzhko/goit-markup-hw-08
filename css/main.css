@@ -1626,11 +1626,17 @@ li {
   top: 50%;
   left: 50%;
   padding: 40px;
+  width: 450px;
+  height: 609px;
   transform: translate(-50%, -50%);
-  width: 528px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__close-btn {
   display: flex;
@@ -1681,10 +1687,15 @@ li {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 768px) {
+  .form__modal > label {
+    font-size: 14px;
+  }
 }
 .form__field {
   display: flex;
