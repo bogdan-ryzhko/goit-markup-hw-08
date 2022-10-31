@@ -676,6 +676,11 @@ li {
   background-size: cover;
   background-position: center;
 }
+@media screen and (min-width: 870px) {
+  .hero {
+    padding: 200px 0;
+  }
+}
 .hero__title {
   font-weight: 900;
   font-size: 26px;
@@ -855,12 +860,24 @@ li {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (min-width: 1057px) {
+  .clients__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .clients__item {
   flex-basis: calc(50% - 30px);
 }
 @media screen and (min-width: 768px) {
   .clients__item {
     flex-basis: calc(33.3333333333% - 30px);
+  }
+}
+@media screen and (min-width: 1057px) {
+  .clients__item {
+    flex-basis: calc(16.6666666667% - 30px);
   }
 }
 .clients__link {
