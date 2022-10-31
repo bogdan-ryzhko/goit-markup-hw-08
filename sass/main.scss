@@ -61,11 +61,12 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
-  &__item + &__item {
-    margin-top: 30px;
-  }
   &__icon-wrapper {
     background-color: #f5f4fa;
     @include flexContainer(flex, center, center);
@@ -94,10 +95,24 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .benefits {
+    &__list {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__item {
+      flex-basis: calc(100% / 2 - 30px);
+      text-align-last: left;
+    }
+  }
+}
+
 // // =================================================> Чим ми займаємось <=================================================
 
 .about {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
   &__list {
@@ -203,6 +218,10 @@
 
   &__item {
     flex-basis: calc(100% / 2 - 30px);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 30px);
+    }
   }
 
   &__link {
