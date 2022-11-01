@@ -256,9 +256,13 @@
     }
 
     &__link {
-      padding: 32px 0;
+      padding: 33px 0;
       color: $main-color;
       transition: color $timing-transition;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.02em;
 
       &:hover,
       &:focus {
@@ -288,6 +292,16 @@
   &__item {
     > .header__link {
       transition: color $timing-transition;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.02em;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(16 / 14);
+      }
+
       &:hover,
       &:focus {
         color: $brand-color;
@@ -302,7 +316,7 @@
         fill: $brand-color;
       }
 
-      @media screen and (min-width: 870px) {
+      @media screen and (min-width: 1200px) {
         padding: 32px 0;
       }
     }
@@ -312,7 +326,7 @@
     margin-top: 10px;
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
 

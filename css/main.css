@@ -625,9 +625,13 @@ li {
     margin-left: 50px;
   }
   .menu-desktop__link {
-    padding: 32px 0;
+    padding: 33px 0;
     color: #212121;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
   }
   .menu-desktop__link:hover, .menu-desktop__link:focus {
     color: #2196f3;
@@ -650,6 +654,16 @@ li {
 
 .desktop-connection__item > .header__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 1200px) {
+  .desktop-connection__item > .header__link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
 }
 .desktop-connection__item > .header__link:hover, .desktop-connection__item > .header__link:focus {
   color: #2196f3;
@@ -660,7 +674,7 @@ li {
 .desktop-connection__item > .header__link:hover .header__icon, .desktop-connection__item > .header__link:focus .header__icon {
   fill: #2196f3;
 }
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 1200px) {
   .desktop-connection__item > .header__link {
     padding: 32px 0;
   }
@@ -668,7 +682,7 @@ li {
 .desktop-connection__item + .desktop-connection__item {
   margin-top: 10px;
 }
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 1200px) {
   .desktop-connection {
     display: flex;
     align-items: center;
