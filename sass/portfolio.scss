@@ -13,6 +13,11 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0px auto 40px;
+
+    @media screen and (min-width: 600px) {
+      max-width: 580px;
+      margin: 0 auto 40px;
+    }
   }
 }
 
@@ -51,17 +56,39 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 27px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 730px;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-width: 100%;
+    }
   }
 
   &__item {
-    flex-basis: calc(100% / 3 - $card-list-gap);
+    width: 450px;
     background-color: #ffffff;
+    border: 1px solid #eeeeee;
+
+    @media screen and (min-width: 768px) {
+      max-width: 350px;
+      flex-grow: 1;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 370px;
+    }
   }
 
   &__link {
     display: inline-block;
-    border: 1px solid #eeeeee;
+    width: 100%;
+    min-height: 100%;
     transition: box-shadow $timing-transition;
 
     &:hover,
@@ -74,6 +101,14 @@
     &:focus .production__text {
       transform: translateY(0);
     }
+
+    @media screen and (min-width: 768px) {
+      max-width: 350px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 370px;
+    }
   }
 
   &__wrapper-content {
@@ -83,7 +118,18 @@
   }
 
   &__img {
-    margin-bottom: 20px;
+    display: block;
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      max-width: 350px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 370px;
+    }
   }
 
   &__text {
@@ -117,6 +163,10 @@
     letter-spacing: 0.06em;
     color: $main-color;
     margin-bottom: 4px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 306px;
+    }
   }
 
   &__descr {

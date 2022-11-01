@@ -1220,6 +1220,12 @@ li {
   flex-wrap: wrap;
   margin: 0px auto 40px;
 }
+@media screen and (min-width: 600px) {
+  .portfolio__list {
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+}
 
 .navigation__btn {
   font-weight: 500;
@@ -1246,15 +1252,41 @@ li {
 .production__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 27px;
 }
+@media screen and (min-width: 768px) {
+  .production__list {
+    max-width: 730px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .production__list {
+    min-width: 100%;
+  }
+}
 .production__item {
-  flex-basis: calc(33.3333333333% - 27px);
+  width: 450px;
   background-color: #ffffff;
+  border: 1px solid #eeeeee;
+}
+@media screen and (min-width: 768px) {
+  .production__item {
+    max-width: 350px;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .production__item {
+    max-width: 370px;
+  }
 }
 .production__link {
   display: inline-block;
-  border: 1px solid #eeeeee;
+  width: 100%;
+  min-height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .production__link:hover, .production__link:focus {
@@ -1263,13 +1295,37 @@ li {
 .production__link:hover .production__text, .production__link:focus .production__text {
   transform: translateY(0);
 }
+@media screen and (min-width: 768px) {
+  .production__link {
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .production__link {
+    max-width: 370px;
+  }
+}
 .production__wrapper-content {
   position: relative;
   overflow: hidden;
   max-height: 294px;
 }
 .production__img {
-  margin-bottom: 20px;
+  display: block;
+  min-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .production__img {
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .production__img {
+    max-width: 370px;
+  }
 }
 .production__text {
   position: absolute;
@@ -1298,6 +1354,11 @@ li {
   letter-spacing: 0.06em;
   color: #212121;
   margin-bottom: 4px;
+}
+@media screen and (min-width: 768px) {
+  .production__name {
+    max-width: 306px;
+  }
 }
 .production__descr {
   font-size: 16px;
