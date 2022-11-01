@@ -671,6 +671,7 @@ li {
 @media screen and (min-width: 870px) {
   .desktop-connection {
     display: flex;
+    align-items: center;
   }
   .desktop-connection__item + .desktop-connection__item {
     margin-top: 0px;

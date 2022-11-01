@@ -314,6 +314,7 @@
 
   @media screen and (min-width: 870px) {
     display: flex;
+    align-items: center;
 
     &__item + &__item {
       margin-top: 0px;
